@@ -1,0 +1,26 @@
+/* BookingPage.css */
+
+.booking-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.booking-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Gör widgeten bredare */
+.calendly-widget-container {
+  display: flex;
+  justify-content: center;
+}
+
+.calendly-widget-container iframe {
+  width: 100%; /* Anpassa bredden som du vill, exempel: 80% av sidbredden */
+  min-width: 700px; /* För att hålla en bra minsta bredd */
+  height: 600px; /* Justera höjden efter behov */
+  border: none; /* Ta bort ramen om du vill */
+}
