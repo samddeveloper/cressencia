@@ -94,7 +94,7 @@ const Home = () => {
         sx={{
           position: "relative",
           width: "100%",
-          height: "98vh",
+          height: { xs: "100vh", sm: "98vh" }, // Full height on mobile, 98vh on larger screens
           backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -102,7 +102,7 @@ const Home = () => {
           alignItems: "center",
           justifyContent: "center",
           color: "white",
-          backgroundAttachment: "fixed",
+          backgroundAttachment: { xs: "scroll", md: "fixed" }, // Disable fixed background on mobile
         }}
       >
         <Box
@@ -136,13 +136,19 @@ const Home = () => {
               gutterBottom
               sx={{
                 fontFamily: "'Great Vibes', cursive",
-                fontSize: "50px",
+                fontSize: { xs: "36px", sm: "50px" }, // Adjust font size for mobile
                 fontWeight: 500,
               }}
             >
               Cressencia - Holistic Center
             </Typography>
-            <Typography variant="h5" paragraph>
+            <Typography
+              variant="h5"
+              paragraph
+              sx={{
+                fontSize: { xs: "16px", sm: "20px" }, // Adjust font size for mobile
+              }}
+            >
               Avslappnande, Helande
             </Typography>
           </FadeInSection>
@@ -181,6 +187,7 @@ const Home = () => {
         </Container>
       </Box>
 
+      {/* Other Sections */}
       <FadeInSection>
         <Container sx={{ py: 8 }} maxWidth="md">
           <Typography variant="h4" gutterBottom>
@@ -204,42 +211,60 @@ const Home = () => {
             <Typography variant="h4" gutterBottom align="center">
               Tjänster
             </Typography>
+            <Typography
+              variant="body2"
+              align="center"
+              sx={{
+                color: "text.secondary", // Use a lighter color from the theme
+                fontStyle: "italic", // Add a subtle italic style
+                mb: 4, // Add some margin below the text
+              }}
+            >
+              Föredrar du mötet digitalt? – Välj "Google Meet" vid bokning.
+            </Typography>
             <Grid container spacing={4}>
-              {["Reiki", "Radiestesi", "Tarotläsning"].map((service) => (
-                <Grid item key={service} xs={12} sm={6} md={4}>
-                  <Card>
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        {service}
-                      </Typography>
-                      <Typography>90 minuter, 500 kr</Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button
-                        size="small"
-                        color="primary"
-                        variant="contained"
-                        component={Link}
-                        to="/boka"
-                      >
-                        Boka nu
-                      </Button>
-                      <Button
-                        size="small"
-                        color="primary"
-                        variant="outlined"
-                        component={Link}
-                        to="/tjanster"
-                        sx={{
-                          ml: 2,
-                        }}
-                      >
-                        Läs mer
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Grid>
-              ))}
+              {["Reiki", "Radiestesi", "Tarotläsning"].map((service) => {
+                let price = "490 kr"; // Standardpris
+                if (service === "Reiki") {
+                  price = "890 kr";
+                }
+
+                return (
+                  <Grid item key={service} xs={12} sm={6} md={4}>
+                    <Card>
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                          {service}
+                        </Typography>
+                        <Typography>90 minuter, {price}</Typography>
+                      </CardContent>
+                      <CardActions>
+                        <Button
+                          size="small"
+                          color="primary"
+                          variant="contained"
+                          component={Link}
+                          to="/boka"
+                        >
+                          Boka nu
+                        </Button>
+                        <Button
+                          size="small"
+                          color="primary"
+                          variant="outlined"
+                          component={Link}
+                          to="/tjanster"
+                          sx={{
+                            ml: 2,
+                          }}
+                        >
+                          Läs mer
+                        </Button>
+                      </CardActions>
+                    </Card>
+                  </Grid>
+                );
+              })}
             </Grid>
           </Container>
         </Box>
@@ -273,7 +298,7 @@ const Home = () => {
         </Container>
       </FadeInSection>
 
-      {/* Uppdaterat kontaktformulär */}
+      {/* Contact Form */}
       <FadeInSection>
         <Container maxWidth="md" sx={{ py: 8 }}>
           <Typography variant="h2" gutterBottom align="center">

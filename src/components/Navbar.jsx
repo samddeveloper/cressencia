@@ -84,7 +84,7 @@ const Navbar = () => {
           sx={{ display: { md: "none" } }}
           onClick={() => setDrawerOpen(true)}
         >
-          <MenuIcon />
+          <MenuIcon sx={{ color: "#6B6B6B" }} /> {/* Updated color */}
         </IconButton>
       </Toolbar>
       <Drawer
