@@ -16,6 +16,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import heroImage from "../Assets/hero.jpg";
 import emailjs from "@emailjs/browser";
+import SittingImg from "../Assets/sitting-profile.png";
 
 const Home = () => {
   // Lokal FadeInSection-komponent
@@ -252,6 +253,23 @@ const Home = () => {
           <Typography variant="body1" align="center">
             Låt oss tillsammans utforska vägen till ditt inre välbefinnande.
           </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              mb: 4,
+              pt: 5,
+            }}
+          >
+            <Box
+              component="img"
+              src={SittingImg}
+              sx={{
+                width: 200,
+                height: "auto",
+              }}
+            />
+          </Box>
         </Container>
       </FadeInSection>
 
