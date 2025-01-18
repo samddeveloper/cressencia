@@ -13,18 +13,18 @@ const About = () => {
       </Typography>
       <Box sx={{ my: 4 }}>
         <Typography variant="body1" paragraph>
-          Under mer än ett decennium har jag bott i Sverige, en plats som har
-          format min syn på livet och min koppling till energi och helande. Min
-          resa började som lärare i idrott och hälsa, ett yrke som lärde mig att
-          förstå kroppen, sinnet och vikten av att hitta balans vilket har
-          omvandlat mig till en passionerad person i undervisning och
-          välbefinnande.
+          Mitt namn är Cesar Lopez. Under mer än ett decennium har jag bott i
+          Sverige, en plats som har format min syn på livet och min koppling
+          till energi och helande. Min resa började som lärare i idrott och
+          hälsa, ett yrke som lärde mig att förstå kroppen, sinnet och vikten av
+          att hitta balans vilket har omvandlat mig till en passionerad person i
+          undervisning och välbefinnande.
         </Typography>
         <Typography variant="body1" paragraph>
-          Idag, som holistisk terapeut, har jag förvandlat denna passion till en
-          djupare väg: att hjälpa människor att läka och återknyta till sin
-          essens. Jag använder tekniker som Reiki, radiestesi, tarotläsning och
-          helande samtal för att vägleda dem som söker klarhet, lättnad och
+          Idag, som certifierad Reiki terapeut, har jag förvandlat denna passion
+          till en djupare väg: att hjälpa människor att läka och återknyta till
+          sin essens. Jag använder tekniker som Reiki, radiestesi, tarotläsning
+          och helande samtal för att vägleda dem som söker klarhet, lättnad och
           förnyelse i sina liv.
         </Typography>
         <Typography variant="body1" paragraph>
@@ -45,7 +45,9 @@ const About = () => {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 2,
           mb: 4,
         }}
       >
@@ -57,6 +59,15 @@ const About = () => {
             height: "auto",
           }}
         />
+        <Typography variant="h5" sx={{ fontWeight: 500, color: "#333" }}>
+          Cesar Lopez
+        </Typography>
+        <Typography
+          variant="h6"
+          sx={{ color: "#666", fontWeight: 400, fontStyle: "italic" }}
+        >
+          Certifierad Reiki Terapeut
+        </Typography>
       </Box>
 
       <Grid container spacing={4} sx={{ mt: 4 }}>

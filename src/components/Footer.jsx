@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Container, Typography, Link, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,11 +9,11 @@ const Footer = () => {
       sx={{
         bgcolor: "#FFF8E8",
         color: "#333",
-        bottom: 0, // Align to bottom
-        left: 0, // Align to left
-        right: 0, // Align to right
-        py: 4, // Reduced padding for better fit
-        borderTop: " 1px solid black",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        py: 4,
+        borderTop: "1px solid black",
       }}
     >
       <Container maxWidth="lg">
@@ -54,37 +55,40 @@ const Footer = () => {
               Våra tjänster
             </Typography>
             <Link
-              href="/tjanster"
-              sx={{
+              to="/tjanster"
+              style={{
                 display: "block",
                 color: "inherit",
                 textDecoration: "none",
-                "&:hover": { color: "#5a6f2e" },
               }}
             >
-              Reiki
+              <Typography sx={{ "&:hover": { color: "#5a6f2e" } }}>
+                Reiki
+              </Typography>
             </Link>
             <Link
-              href="/tjanster"
-              sx={{
+              to="/tjanster"
+              style={{
                 display: "block",
                 color: "inherit",
                 textDecoration: "none",
-                "&:hover": { color: "#5a6f2e" },
               }}
             >
-              Radiestesi
+              <Typography sx={{ "&:hover": { color: "#5a6f2e" } }}>
+                Radiestesi
+              </Typography>
             </Link>
             <Link
-              href="/tjanster"
-              sx={{
+              to="/tjanster"
+              style={{
                 display: "block",
                 color: "inherit",
                 textDecoration: "none",
-                "&:hover": { color: "#5a6f2e" },
               }}
             >
-              Tarotläsning
+              <Typography sx={{ "&:hover": { color: "#5a6f2e" } }}>
+                Tarotläsning
+              </Typography>
             </Link>
           </Grid>
 
@@ -94,37 +98,52 @@ const Footer = () => {
               Navigering
             </Typography>
             <Link
-              href="/om"
-              sx={{
+              to="/om"
+              style={{
                 display: "block",
                 color: "inherit",
                 textDecoration: "none",
-                "&:hover": { color: "#5a6f2e" },
               }}
             >
-              Om Cressencia
+              <Typography sx={{ "&:hover": { color: "#5a6f2e" } }}>
+                Om Cressencia
+              </Typography>
             </Link>
             <Link
-              href="/kontakt"
-              sx={{
+              to="/kontakt"
+              style={{
                 display: "block",
                 color: "inherit",
                 textDecoration: "none",
-                "&:hover": { color: "#5a6f2e" },
               }}
             >
-              Kontakta oss
+              <Typography sx={{ "&:hover": { color: "#5a6f2e" } }}>
+                Kontakta oss
+              </Typography>
             </Link>
             <Link
-              href="/boka"
-              sx={{
+              to="/boka"
+              style={{
                 display: "block",
                 color: "inherit",
                 textDecoration: "none",
-                "&:hover": { color: "#5a6f2e" },
               }}
             >
-              Boka tid
+              <Typography sx={{ "&:hover": { color: "#5a6f2e" } }}>
+                Boka tid
+              </Typography>
+            </Link>
+            <Link
+              to="/villkor"
+              style={{
+                display: "block",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              <Typography sx={{ "&:hover": { color: "#5a6f2e" } }}>
+                Villkor
+              </Typography>
             </Link>
           </Grid>
         </Grid>

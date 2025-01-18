@@ -186,7 +186,6 @@ const Home = () => {
           </FadeInSection>
         </Container>
       </Box>
-
       {/* Other Sections */}
       <FadeInSection>
         <Container sx={{ py: 8 }} maxWidth="md">
@@ -194,17 +193,17 @@ const Home = () => {
             Om Cressencia
           </Typography>
           <Typography variant="body1" paragraph>
-            Med över ett decennium av erfarenhet i Sverige har jag utvecklat en
-            djup förståelse för kropp, sinne och energi. Som holistisk terapeut
-            är min mission att hjälpa dig hitta balans och inre frid genom
-            tekniker som Reiki, radiestesi och tarotläsning.
+            Mitt namn är Cesar Lopez. Med över ett decenniums erfarenhet i
+            Sverige har jag utvecklat en djup förståelse för kropp, sinne och
+            energi. Som certifierad Reiki terapeut är min mission att hjälpa dig
+            hitta balans och inre frid genom tekniker som Reiki, radiestesi och
+            tarotläsning.
           </Typography>
           <Button component={Link} to="/om" variant="contained" color="primary">
             Läs mer
           </Button>
         </Container>
       </FadeInSection>
-
       <FadeInSection>
         <Box sx={{ bgcolor: "background.paper", py: 8 }}>
           <Container maxWidth="md">
@@ -281,7 +280,9 @@ const Home = () => {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "center",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
               mb: 4,
               pt: 5,
             }}
@@ -294,6 +295,15 @@ const Home = () => {
                 height: "auto",
               }}
             />
+            <Typography variant="h5" sx={{ fontWeight: 500, color: "#333" }}>
+              Cesar Lopez
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{ color: "#666", fontWeight: 400, fontStyle: "italic" }}
+            >
+              Certifierad Reiki Terapeut
+            </Typography>
           </Box>
         </Container>
       </FadeInSection>
